@@ -1,0 +1,30 @@
+#!/bin/sh
+
+rm -rf ~/.config/shell/bm-dirs
+cp /home/user/sync/dotfiles/dirs.txt /home/user/.config/shell/bm-dirs
+
+rm -rf ~/.config/mpv/input.conf
+cp /home/user/sync/dotfiles/mpv.txt /home/user/.config/mpv/input.conf
+
+rm -rf ~/.config/nvim/init.vim
+cp /home/user/sync/dotfiles/nvim.txt /home/user/.config/nvim/init.vim
+
+rm -rf ~/.config/zsh/.zshrc
+cp /home/user/sync/dotfiles/zsh.txt /home/user/.config/zsh/.zshrc
+
+rm -rf ~/.config/rofi/
+mkdir ~/.config/rofi
+cp /home/user/sync/dotfiles/rofi.txt /home/user/.config/rofi/config.rasi
+
+rm -rf ~/.config/lf
+cp -r /home/user/sync/dotfiles/lf /home/user/.config
+
+rm -rf ~/.local/src/dwm/config.h
+cp /home/user/sync/dotfiles/dwm.txt /home/user/.local/src/dwm/config.h
+cd /home/user/.local/src/dwm
+sudo make clean install
+
+rm -rf ~/.local/src/dwmblocks/config.h
+cp /home/user/sync/dotfiles/dwmblocks.txt /home/user/.local/src/dwmblocks/config.h
+cd /home/user/.local/src/dwmblocks
+sudo make clean install
